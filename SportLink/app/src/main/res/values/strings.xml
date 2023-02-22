@@ -3,4 +3,20 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="profile_name">Anna, 22</string>
+    <string name="profile_location">Stockholm, Sweden</string>
+    <string name="profile_biography">Biography</string>
+    <string name="profile_biotext">Hej! I’m a student looking forward to meeting new people who exercising with. </string>
+    <string name="profile_aboutme">About Me</string>
+    <string name="profile_yourpictures">Your pictures</string>
+    <string name="profile_yourinterests">Your interests</string>
+    <string name="profile_achievements">Achievements</string>
+    <string name="profile_partner"> ➤ Looking for a Long-term partner</string>
+    <string name="profile_padel">Padel</string>
+    <string name="profile_kayak">Kayak</string>
+    <string name="profile_run">Jogging</string>
+    <string name="profile_gym">Gym</string>
+    <string name="edit">edit</string>
+    <string name="profile_achitext">Black belt in Karate
+4 years member of kayak school team</string>
 </resources>
