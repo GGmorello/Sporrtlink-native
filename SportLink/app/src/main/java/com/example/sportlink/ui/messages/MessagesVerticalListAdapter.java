@@ -1,4 +1,4 @@
-package com.example.sportlink.ui.notifications;
+package com.example.sportlink.ui.messages;
 
 import android.app.Activity;
 
@@ -6,20 +6,18 @@ import com.example.sportlink.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-public class MessageVerticalListAdapter extends ArrayAdapter<String> {
+public class MessagesVerticalListAdapter extends ArrayAdapter<String> {
 
     private final Activity context;
     private final String[] maintitle;
     private final String[] subtitle;
     private final Integer[] imgid;
 
-    public MessageVerticalListAdapter(Activity context, String[] maintitle,String[] subtitle, Integer[] imgid) {
+    public MessagesVerticalListAdapter(Activity context, String[] maintitle, String[] subtitle, Integer[] imgid) {
         super(context, R.layout.message_vertical_list_item, maintitle);
         this.context=context;
         this.maintitle=maintitle;
