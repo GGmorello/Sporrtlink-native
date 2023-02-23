@@ -6,17 +6,183 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="-3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="223dp"
+                tools:layout_editor_absoluteY="0dp">
+                <LinearLayout
+                    android:layout_width="410dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="0dp">
+                    <FrameLayout
+                        android:layout_width="220dp"
+                        android:layout_height="220dp">
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start"
+                            android:onClick="onClickLeft"
+                            android:src="@drawable/chevron_left"
+                            app:backgroundTint="@color/white"
+                            app:elevation="0dp"
+                            app:fabSize="mini"/>
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:onClick="onClickRight"
+                            android:src="@drawable/chevron_right"
+                            app:backgroundTint="@color/white"
+                            app:elevation="0dp"
+                            app:fabSize="mini"/>
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="184dp"
+                        android:layout_height="212dp"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="223dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <TextView
+                            android:id="@+id/textViewName"
+                            android:layout_width="96dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="40dp"
+                            tools:layout_editor_absoluteX="245dp"
+                            tools:layout_editor_absoluteY="38dp" />
+
+                        <TextView
+                            android:id="@+id/textViewAge"
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="28dp"
+                            tools:layout_editor_absoluteX="245dp"
+                            tools:layout_editor_absoluteY="65dp" />
+
+                        <TextView
+                            android:id="@+id/textViewDistance"
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="16dp"
+                            tools:layout_editor_absoluteX="245dp"
+                            tools:layout_editor_absoluteY="65dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewInterests"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:text="Interests"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="6dp"
+                    tools:layout_editor_absoluteX="245dp"
+                    tools:layout_editor_absoluteY="65dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"/>
+                <TextView
+                    android:id="@+id/textViewBiographyHeader"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:text="Biography"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="6dp"
+                    tools:layout_editor_absoluteX="245dp"
+                    tools:layout_editor_absoluteY="65dp" />
+                <TextView
+                    android:id="@+id/textViewBiographyContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="245dp"
+                    tools:layout_editor_absoluteY="65dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"/>
+                <TextView
+                    android:id="@+id/textViewAchievementsHeader"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Achievements"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="6dp"
+                    tools:layout_editor_absoluteX="245dp"
+                    tools:layout_editor_absoluteY="65dp" />
+                <TextView
+                    android:id="@+id/textViewAchievementsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="245dp"
+                    tools:layout_editor_absoluteY="65dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/rejectButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:onClick="onClickButton"
+                        android:src="@drawable/close"
+                        app:backgroundTint="@color/light_red"
+                        app:elevation="0dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/approveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:onClick="onClickButton"
+                        android:src="@drawable/check"
+                        app:backgroundTint="@color/light_green"
+                        app:elevation="0dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
