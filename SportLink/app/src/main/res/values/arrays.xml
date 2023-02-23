@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="sports_array">
+        <item>Football</item>
+        <item>Basketball</item>
+        <item>Tennis</item>
+        <item>Volleyball</item>
+        <item>Hockey</item>
+        <item>Baseball</item>
+        <item>Hiking</item>
+        <item>Swimming</item>
+        <item>Running</item>
+        <item>Cycling</item>
+        <item>Custom</item>
+    </array>
+</resources>
