@@ -1,2 +1,2 @@
 # Sportlink-native
-native implementation of our app for the course ID2216 Developing Mobile Applications
+Native implementation of our application for the course ID2216 Developing Mobile Applications at KTH
