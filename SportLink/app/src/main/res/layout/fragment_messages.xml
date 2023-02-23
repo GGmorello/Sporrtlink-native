@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.messages.MessagesFragment">
+
+    <HorizontalScrollView
+        android:id="@+id/list_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/text_notifications2">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="120dp"
+                android:layout_height="190dp"
+                app:srcCompat="@drawable/pexelsphoto1542085"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:text="Testa"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/icon0"
+                android:layout_width="120dp"
+                android:layout_height="190dp"
+                app:srcCompat="@drawable/pexelsphoto040881"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:text="Testo"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="120dp"
+                android:layout_height="190dp"
+                app:srcCompat="@drawable/pexelsphoto733872"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:text="Testina"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="120dp"
+                android:layout_height="190dp"
+                app:srcCompat="@drawable/pexelsphoto1542085"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Testa"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="120dp"
+                android:layout_height="190dp"
+                app:srcCompat="@drawable/pexelsphoto040881"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:text="Testo"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </HorizontalScrollView>
+
+    <ListView
+        android:id="@+id/list_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_notifications" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/text_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Messages"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/list_horizontal"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/text_notifications2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="New Matches"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
