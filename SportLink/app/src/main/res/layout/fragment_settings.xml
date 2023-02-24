@@ -39,19 +39,35 @@
     </RadioGroup>
 
 
-    <EditText
-        android:id="@+id/custom_sport_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/custom_sport_hint"
-        android:visibility="gone"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/save_custom_sport_button"
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/custom_sport_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/custom_sport_hint"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/save_custom_sport_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_save_button"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/saved_custom_sports_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/custom_save_button"
-        android:visibility="gone"/>
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
 
     <TextView
         android:id="@+id/saved_custom_sport_text_view"
@@ -90,7 +106,6 @@
             android:layout_height="wrap_content"
             android:text="@string/both" />
     </RadioGroup>
-
 
     <TextView
         android:id="@+id/age_range_textview"
@@ -138,4 +153,7 @@
         android:layout_height="wrap_content"
         android:text="@string/save_button_label" />
 
+
+
 </LinearLayout>
+

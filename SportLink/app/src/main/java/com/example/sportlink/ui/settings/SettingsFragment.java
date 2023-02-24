@@ -3,6 +3,7 @@ package com.example.sportlink.ui.settings;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.sportlink.R;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class SettingsFragment extends Fragment {
@@ -69,11 +73,8 @@ public class SettingsFragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.custom_sports_radio_button) {
                     customSportView.setVisibility(View.VISIBLE);
-
-                    // Show save button
                     saveCustomSportButton.setVisibility(View.VISIBLE);
-
-                    // Set click listener for save button
+                    savedCustomSportTextView.setVisibility(View.VISIBLE);
                     saveCustomSportButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -81,19 +82,26 @@ public class SettingsFragment extends Fragment {
                             String customSport = customSportView.getText().toString();
 
                             // Save the custom sport to SharedPreferences
-                            SharedPreferences.Editor editor = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE).edit();
-                            editor.putString("custom_sport", customSport);
+                            SharedPreferences prefs = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                            Set<String> customSportsSet = prefs.getStringSet("custom_sports", new HashSet<String>());
+                            customSportsSet.add(customSport);
+
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putStringSet("custom_sports", customSportsSet);
                             editor.apply();
 
-                            // Show the saved custom sport in a TextView
-                            String savedCustomSport = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE).getString("custom_sport", "");
-                            savedCustomSportTextView.setText(savedCustomSport);
+                            String savedCustomSports = TextUtils.join(", ", customSportsSet);
+                            savedCustomSportTextView.setText(savedCustomSports);
                             savedCustomSportTextView.setVisibility(View.VISIBLE);
+
+                            // Show the saved custom sport in a TextView
+                            customSportView.setText("");
                         }
                     });
                 } else {
                     customSportView.setVisibility(View.GONE);
                     saveCustomSportButton.setVisibility(View.GONE);
+                    savedCustomSportTextView.setVisibility(View.GONE);
 
                 }
             }
