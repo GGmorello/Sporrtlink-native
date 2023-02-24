@@ -72,7 +72,6 @@ public class MessagesFragment extends Fragment {
     public void chatPage(){
         //Send the information to the next activity
         Intent intent = new Intent((Activity) super.getContext(), ChatPage.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION| Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         //intent.putExtra("profileToLoad", profile);
         startActivity(intent);
     }
