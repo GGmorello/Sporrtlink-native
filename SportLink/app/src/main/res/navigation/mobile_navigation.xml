@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.sportlink.ui.notifications.NotificationsFragment"
+        android:name="com.example.sportlink.ui.messages.MessagesFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_messages" />
 
     <fragment
         android:id="@+id/navigation_settings"
