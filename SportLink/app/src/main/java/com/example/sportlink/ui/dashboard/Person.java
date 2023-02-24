@@ -1,17 +1,15 @@
 package com.example.sportlink.ui.dashboard;
 
-import android.graphics.drawable.Drawable;
-
 public class Person {
     private String name;
     private String age;
     private int[] images;
     private String distance;
-    private String[] interests;
+    private InterestTag[] interests;
     private String biography;
     private String achievements;
 
-    public Person(String name, String age, int[] images, String distance, String[] interests, String biography, String achievements) {
+    public Person(String name, String age, int[] images, String distance, InterestTag[] interests, String biography, String achievements) {
         this.name = name;
         this.age = age;
         this.images = images;
@@ -37,7 +35,7 @@ public class Person {
         return distance;
     }
 
-    public String[] getInterests() {
+    public InterestTag[] getInterests() {
         return interests;
     }
 

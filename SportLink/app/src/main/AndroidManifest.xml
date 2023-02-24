@@ -28,6 +28,7 @@
         <activity
             android:name=".ui.messages.ChatPage"
             android:exported="true"
+            android:parentActivityName=".MainActivity"
             android:label="@string/app_name">
         </activity>
     </application>
